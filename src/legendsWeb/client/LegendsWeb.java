@@ -35,14 +35,15 @@ public class LegendsWeb implements EntryPoint {
 		woundsPanel = rightPanel.createWoundsPanel(rpgChar);
 		woundsPanel.addStyleName("woundTable");
 		rpgChar.addListener(rightPanel);
+		
+		//skillpanel
+		SkillPanel skillPanel = new SkillPanel();
 
 		mainPanel.setWidget(0, 1, woundsPanel);
 		mainPanel.getFlexCellFormatter().setRowSpan(0, 1, 2);
 		mainPanel.setWidget(0, 0, infoPanel);
 		mainPanel.setWidget(1, 0, ringsAndTraitsPanel);
-		PopupPanel popup = new PopupPanel();
-		popup.setWidget(new Label("Popup!"));
-		mainPanel.setWidget(2, 0, popup);
+		mainPanel.setWidget(2,0, new SkillPanel().newSkillButton());
 		
 		RootPanel.get("l5rsheet").add(mainPanel);
 
