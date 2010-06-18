@@ -45,11 +45,13 @@ public class WoundsPanel implements IListener {
 		wTable.setText(10, 0, "Current");
 		wTable.setWidget(10, 1, currentWoundsBox);
 		currentWoundsBox.setText("0");
+		currentWoundsBox.addStyleName("RankBox");
 		currentWoundsBox.addKeyUpHandler(woundChecker);
 
 		createWoundLevels();
 
 		woundsPanel.add(wTable);
+		woundsPanel.addStyleName("WoundsPanel");
 		return woundsPanel;
 
 	}

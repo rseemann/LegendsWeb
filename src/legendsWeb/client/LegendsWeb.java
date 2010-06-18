@@ -2,6 +2,7 @@ package legendsWeb.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.PopupPanel;
@@ -43,9 +44,11 @@ public class LegendsWeb implements EntryPoint {
 		mainPanel.getFlexCellFormatter().setRowSpan(0, 1, 2);
 		mainPanel.setWidget(0, 0, infoPanel);
 		mainPanel.setWidget(1, 0, ringsAndTraitsPanel);
-		mainPanel.setWidget(2,0, new SkillPanel().newSkillButton());
+		mainPanel.setWidget(2,0, skillPanel.createSkillPanel(rpgChar));
 		
+				
 		RootPanel.get("l5rsheet").add(mainPanel);
-
+		topInfoPanel.getNameField().setFocus(true);
+		
 	}
 }

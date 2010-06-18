@@ -121,7 +121,8 @@ public class TopPanel implements IListener{
 		updateRingsBox();
 
 		// add to panel
-		ringsAndTraitsTable.setBorderWidth(5);
+		ringsAndTraitsTable.setBorderWidth(6);
+		ringsAndTraitsTable.addStyleName("ringsPanel");
 		ringsAndTraitsTable.setWidget(1, 0, earthPanel);
 		ringsAndTraitsTable.getCellFormatter().setHorizontalAlignment(1, 0,
 				HasHorizontalAlignment.ALIGN_CENTER);
